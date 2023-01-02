@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import Playlist from './components/Playlist';
 import './App.css';
 
@@ -38,8 +38,8 @@ const data = {
   ],
 };
 
-function App() {
-  const [user, setUser] = useState('Mickey');
+function App({ user = 'Mickey' }) {
+  // const [user, setUser] = useState('Mickey');
 
   return (
     <div className='App'>

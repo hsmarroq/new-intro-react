@@ -5,7 +5,7 @@ body {
   background-color: #0665a2;
   color: #fff;
   font-family: 'Source Sans Pro', arial, sans-serif;
-  line-height: 1.62;
+  list-style: 1.62;
   padding: 16px 0;
 }
 
@@ -20,12 +20,10 @@ button {
   max-width: 800px;
   margin: 10px auto;
 }
-
 .playlist {
   display: flex;
   flex-direction: column;
 }
-
 .playlist .info {
   display: flex;
   flex-direction: row;
@@ -36,6 +34,7 @@ button {
 .playlist .info .title {
   font-size: 24px;
 }
+
 .controls {
   display: flex;
   flex-direction: row;
@@ -51,13 +50,13 @@ button {
 }
 
 .btn {
-  font-size: 36px;
   cursor: pointer;
   color: white;
+  font-size: 36px;
 }
 
 .btn:active {
-  transform: translateY(1px);
+  transform: translate(1px);
 }
 
 ul.tracks {
@@ -79,7 +78,7 @@ ul.tracks {
 }
 
 .song:active {
-  transform: rotateY(1px);
+  transform: translate(1px);
 }
 
 .song .position {
@@ -122,4 +121,32 @@ ul.tracks {
 .button-play-pause span.paused {
   border-style: solid;
   border-width: 37px 0 37px 60px;
+}
+
+.current-song {
+  margin-left: auto;
+}
+.add-track-form {
+  margin-top: 20px;
+}
+.add-track-form h2 {
+  margin: 10px 0;
+}
+.add-track-form .form-input {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+.add-track-form input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+}
+
+.add-track-form .submit {
+  font-size: 24px;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin-top: 10px;
 }
