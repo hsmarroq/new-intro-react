@@ -1,4 +1,4 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 import Playlist from './components/Playlist';
 import './App.css';
 
@@ -39,12 +39,18 @@ const data = {
 };
 
 function App({ user = 'Mickey' }) {
-  // const [user, setUser] = useState('Mickey');
+  const [playlistName] = useState(data.name);
+  const [songs, setSongs] = useState(data.songs);
 
+  const addSong = (newSong) => {
+    setSongs((currentSongs) => [...currentSongs, newSong]);
+  };
+
+  const playlist = { name: playlistName, songs: songs };
   return (
     <div className='App'>
       <h1>{user}'s Playlist</h1>
-      <Playlist playlist={data} />
+      <Playlist playlist={playlist} addSong={addSong} />
     </div>
   );
 }

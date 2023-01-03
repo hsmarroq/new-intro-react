@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Track from './Track';
-// import AddTrack from './AddTrack';
+import AddTrack from './AddTrack';
 
 export default function Playlist(props) {
   const [status, setStatus] = useState('Paused...');
@@ -100,7 +100,7 @@ export default function Playlist(props) {
         ))}
       </ul>
 
-      {/* <AddTrack addSong={props.addSong} /> */}
+      <AddTrack addSong={props.addSong} />
     </div>
   );
 }
